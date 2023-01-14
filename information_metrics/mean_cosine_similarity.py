@@ -13,17 +13,17 @@ def mean_cosine_similarity_v3(p,q):
     exp_data = normalize(exp_data)
     N = len(exp_data)
     M = len(exp_data.columns)
-    for i in range(N):
-        k = np.count_nonzero(exp_data.iloc[i,:]) #Find out if gene has no readouts for any samples and skip the iteration
+    for i in exp_data.index:
+        k = np.count_nonzero(exp_data.loc[i,:]) #Find out if gene has no readouts for any samples and skip the iteration
         if k==0: 
             print(np.nan)
             continue
         elif k==1: #Find out if gene has readouts in just one sample and so make the metric zero and skip
             print(0)
             continue
-        signal_sample_ind = exp_data.iloc[i,:].sort_values().index[p:q]
+        signal_sample_ind = exp_data.loc[i,:].sort_values().index[p:q]
         num_signals = len(signal_sample_ind)
-        sum_similarity=np.sum(cosine_similarity(np.transpose(exp_data.iloc[:,signal_sample_ind])))
+        sum_similarity=np.sum(cosine_similarity(np.transpose(exp_data.loc[:,signal_sample_ind])))
         mean_similarity=sum_similarity/((num_signals*(num_signals-1))/2)
         print(mean_similarity)
         
