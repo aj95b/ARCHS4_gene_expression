@@ -4,7 +4,7 @@ import seaborn as sns
 import sys, os
 from scipy import stats
 from read_data import read_expression_data
-from normalization.gene_expression_normalization import normalize
+from normalization.normalize_gene_expression import normalize
 
 def top_p_percentile_signal(p):
     exp_data = read_expression_data()
