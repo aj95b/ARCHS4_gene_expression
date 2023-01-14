@@ -11,6 +11,7 @@ def read_expression_data():
   
 def main()
   exp_data=read_expression_data()
-  
+  # Only keep the slice of expression data that has annotations of sample type available
+  sample_anno = 
 if __name__ == "__main__":
   main()
