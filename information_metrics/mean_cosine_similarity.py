@@ -29,8 +29,8 @@ def mean_cosine_similarity_v3(p,q):
         
         
 def main():
-    #Rank of 95 percentile value given no. of biosamples in ARCHS4
-    rank=0.95*(620824+1)
+    #Rank of 95 percentile value given no. of biosamples in ARCHS4; ones you consider for your computations, we have 121983 biosamples with annotations
+    rank=0.95*(121983+1)
     p=int(rank)-50
     q=int(rank)+50
     mean_cosine_similarity_v3(p,q)
