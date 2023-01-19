@@ -26,7 +26,7 @@ def read_expression_data():
   # Only keep the slice of expression data that has annotations of sample type available
   sample_anno = sample_labels()
   exp_data = exp_data[sample_anno.index]
-  retrun exp_data
+  return exp_data
   
 def main()
   exp_data=read_expression_data()
