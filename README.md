@@ -14,5 +14,7 @@ The ranking metrics modified for gene-expression data.
 To approximate signal to noise ratio for gene expression, we modified the metric to get the 95 percentile expression value for each gene, making the metric more robust to noise errors from both ends, given the high dimensionality of the data. The expression values from the low expressed biosamples for each gene present a near constant noise level for each gene, likewise the highest expression values are prone to errors from the Kallisto aligner leading to misjudgement in the relative expression values of biosamples within a gene. The 95 percentile expression value hence is a better measure of signal contained in a gene.
 ### Mean Cosine Similarity:
 We identified 100 biosamples around the 95 percentile signal value for each gene, and computed the mean of the cosine similarity among them.
+## classification:
+Most biosaples in the dataset do not have a cell-line or a tissue-type annotation. We use a Random Forest Classifier to classify them. We use ~120K labeleld biosamples to train, validate and test the model.
 ## GAN_rare_labels:
 Classification is better if labels with only a meagre training examples are removed. However, in this case the rare labels, for example brain biosamples are scarce and difficult to obtain. So, data augmentation techniques are crucial to still be able to build a prediction model. Here, I use a GAN (generative adversarial network) to generate synthetic examples to simulate gene-expression of biosamples from brain. 
