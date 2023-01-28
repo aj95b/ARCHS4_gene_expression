@@ -7,7 +7,7 @@ The expression values in the data are raw read counts from the Kallisto sequence
 #### Quantile Normalization:
 We added a pseudo-count of 1 to all the expression values and performed log transformation, followed by quantile normalization, to force the expression values to have similar distribution.
 #### Gene length Normalization:
-For each gene, we used the length of its longest transcript from the [GENCODE] (https://www.gencodegenes.org/) to divide the expression values from each biosample.
+For each gene, we used the length of its longest transcript from the [GENCODE](https://www.gencodegenes.org/) to divide the expression values from each biosample.
 ## information_metrics:
 The ranking metrics modified for gene-expression data.
 #### The Signal Metric:
