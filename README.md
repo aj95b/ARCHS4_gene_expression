@@ -13,7 +13,7 @@ To approximate signal to noise ratio for gene expression, we modified the metric
 #### Mean Cosine Similarity:
 We identified 100 biosamples around the 95 percentile signal value for each gene, and computed the mean of the cosine similarity among them.
 ## classification:
-Most biosaples in the dataset do not have a cell-line or a tissue-type annotation. A machine learning model that can classify biosamples can help gain deeper insights into the highly expressed arcane genes in the sample; and also help identify maximally similar other biosamples, in case of biosamples of rare diseases. We use a Random Forest Classifier to classify them. We use ~120K labeleld biosamples to train, validate and test the model.
+Most biosamples in the dataset do not have a cell-line or a tissue-type annotation. A machine learning model that can classify biosamples can help gain deeper insights into the highly expressed arcane genes in the sample; and also help identify maximally similar other biosamples, in case of biosamples of rare diseases. We use a Random Forest Classifier to classify them. We use ~120K labeleld biosamples to train, validate and test the model.
 ## create_multi_hot_encoded_biosample_annotation.py:
 We downloaded all the expression files for all tissue types and cell lines from https://maayanlab.cloud/archs4/ and created a multi-hot encoded version for all the biosamples for which there exists an annotation. There are 121,983 such biosamples. 
 ## GAN_rare_labels:
