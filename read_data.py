@@ -28,7 +28,7 @@ def read_expression_data():
   exp_data = exp_data[sample_anno.index]
   return exp_data
   
-def main()
+def main():
   exp_data=read_expression_data()
   
   
