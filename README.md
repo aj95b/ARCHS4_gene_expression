@@ -1,5 +1,5 @@
 # gene_expression
-[ARCHS4](https://github.com/MaayanLab/archs4) is the biggest gene expression dataset that aggregates the vast majority of the published RNA-seq data for human and mouse. The results are published in https://www.nature.com/articles/s41467-018-03751-6 and form a valuable resource for designing experiments that would help draw insights from the human genome. Its latest version provides over 620K biosmaples for over 60K genes.
+[ARCHS4](https://github.com/MaayanLab/archs4) is the biggest gene expression dataset that aggregates the vast majority of the published RNA-seq data for human and mice. The results are published in https://www.nature.com/articles/s41467-018-03751-6 and form a valuable resource for designing experiments that would help draw insights from the human genome. Its latest version provides over 620K biosmaples for over 60K genes.
 ## normalization:
 The expression values in the data are raw read counts from the Kallisto sequence aligner. The process produces readcounts that are neither similarly distributed for each biosmaple, nor do they account for sequencing depth for the length of a gene. To rectify both the issues we performed two steps:
 #### Quantile Normalization:
